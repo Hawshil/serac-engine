@@ -1,7 +1,9 @@
 #include <iostream>
+#include "Math/Vec2.h"
 
 int main()
 {
-	std::cout << "Serac Engine init\n";
-	return 0;
+    std::cout << "Only for testing the serac engine!" << std::endl;
+
+    return 0;
 }

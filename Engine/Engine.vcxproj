@@ -70,6 +70,22 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)Binaries\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Build\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(ProjectDir)Binaries\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Build\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(ProjectDir)Binaries\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Build\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(ProjectDir)Binaries\$(Configuration)\</OutDir>
+    <IntDir>$(ProjectDir)Build\$(Configuration)\</IntDir>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level4</WarningLevel>
@@ -151,7 +167,15 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\Scene\Component.cpp" />
+    <ClCompile Include="src\Scene\Entity.cpp" />
     <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Math\Vec2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Scene\Component.h" />
+    <ClInclude Include="src\Scene\Entity.h" />
+    <ClInclude Include="src\Math\Vec2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
